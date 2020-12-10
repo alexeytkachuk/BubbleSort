@@ -19,8 +19,8 @@ namespace JuggerArray
             }
 
             
-            Console.WriteLine("Min To Max {0}", string.Join (" ", BubbleSortMax(myArray))); 
-            Console.Write("Max To Min {0}", string.Join (" ", BubbleSortMin(myArray)));
+            Console.WriteLine("Min To Max {0}", string.Join (" / ", BubbleSortMax(myArray))); 
+            Console.Write("Max To Min {0}", string.Join (" / ", BubbleSortMin(myArray)));
             Console.ReadKey();
 
         }
