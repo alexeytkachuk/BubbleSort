@@ -7,20 +7,21 @@ namespace JuggerArray
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("How many symbols do you have?");
+            Console.WriteLine("How many symbols do you want to have?");
             int numberOfSymbols = Convert.ToInt32(Console.ReadLine());
             int[] myArray = new int[numberOfSymbols];
 
-           
+            Random rnd = new Random();
+
             for (int i = 0; i < myArray.Length; i++)
             {
-                Console.Write($"Enter {numberOfSymbols--} numbers ", i + 1);
-                myArray[i] = int.Parse(Console.ReadLine());
+                //Console.Write($"Enter {numberOfSymbols--} numbers ", i + 1);
+                myArray[i] = rnd.Next(0, 100);
             }
 
-            
-            Console.WriteLine("Min To Max {0}", string.Join (" / ", BubbleSortMax(myArray))); 
-            Console.Write("Max To Min {0}", string.Join (" / ", BubbleSortMin(myArray)));
+
+            Console.WriteLine("Min To Max {0}", string.Join(" / ", BubbleSortMax(myArray)));
+            Console.Write("Max To Min {0}", string.Join(" / ", BubbleSortMin(myArray)));
             Console.ReadKey();
 
         }
